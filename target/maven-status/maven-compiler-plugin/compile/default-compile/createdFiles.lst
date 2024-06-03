@@ -1,0 +1,13 @@
+com\library\dao\impl\BookFileDao.class
+com\library\App.class
+com\library\controllers\LibraryController.class
+com\library\algorithms\LibraryAlgorithm.class
+com\library\dao\IDao.class
+com\library\models\Book.class
+com\library\Main.class
+com\library\models\User.class
+com\library\services\LibraryService.class
+com\library\services\BookService.class
+com\library\services\NotificationService.class
+com\library\services\UserService.class
+com\library\dao\impl\UserFileDao.class
