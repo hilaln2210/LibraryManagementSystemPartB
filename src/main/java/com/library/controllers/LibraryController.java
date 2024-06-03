@@ -1,22 +1,37 @@
 package com.library.controllers;
 
+import com.library.models.Book;
 import com.library.models.User;
-import com.library.services.UserService;
+import com.library.services.LibraryService;
 
 public class LibraryController {
-    private UserService userService;
+    private LibraryService libraryService;
 
-    public LibraryController(UserService userService) {
-        this.userService = userService;
+    public LibraryController(LibraryService libraryService) {
+        this.libraryService = libraryService;
     }
 
     public void registerUser(User user) {
-        userService.registerUser(user);
-        System.out.println("User registered: " + user);
+        libraryService.registerUser(user);
+    }
+
+    public User getUserById(int id) {
+        return libraryService.getUserById(id);
     }
 
     public void deleteUser(int id) {
-        userService.deleteUser(id);
-        System.out.println("User with ID " + id + " deleted");
+        libraryService.deleteUser(id);
+    }
+
+    public void addBook(Book book) {
+        libraryService.addBook(book);
+    }
+
+    public Book getBookById(int id) {
+        return libraryService.getBookById(id);
+    }
+
+    public void deleteBook(int id) {
+        libraryService.deleteBook(id);
     }
 }
